@@ -36,10 +36,15 @@ if __name__ == "__main__":
             for review in review_tags:
                 review_name_tag = review.find_element(By.CSS_SELECTOR, 'span.biGQs._P.SewaP.OgHoE')
                 review_content_tag = review.find_element(By.CSS_SELECTOR, 'span.JguWG')
+                rating_title_element = review.find_element(By.CSS_SELECTOR, 'svg[data-automation="bubbleRatingImage"] title')
+                rating_text = rating_title_element.get_attribute('textContent').strip()
+                rating_value = rating_text.split()[0]
+                
                 if review_name_tag and review_content_tag:
                     data['reviews'].append({
                         "Review Name": review_name_tag.text.strip(),
-                        "Review Content": review_content_tag.text.strip()
+                        "Review Content": review_content_tag.text.strip(),
+                        "Rating": f"{rating_value}/5"
                     })
             driver.find_element(By.CSS_SELECTOR, 'a[data-smoke-attr="pagination-next-arrow"]').click()
             time.sleep(5)
