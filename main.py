@@ -36,15 +36,17 @@ if __name__ == "__main__":
             for review in review_tags:
                 review_name_tag = review.find_element(By.CSS_SELECTOR, 'span.biGQs._P.SewaP.OgHoE')
                 review_content_tag = review.find_element(By.CSS_SELECTOR, 'span.JguWG')
-                rating_title_element = review.find_element(By.CSS_SELECTOR, 'svg[data-automation="bubbleRatingImage"] title')
-                rating_text = rating_title_element.get_attribute('textContent').strip()
-                rating_value = rating_text.split()[0]
+                rating_title_tag = review.find_element(By.CSS_SELECTOR, 'svg[data-automation="bubbleRatingImage"] title')
+                review_date_tag = review.find_element(By.CSS_SELECTOR, 'div.biGQs._P.VImYz.AWdfh')
+                date_stay_tag = review.find_element(By.CSS_SELECTOR, 'span.biGQs._P.VImYz.xENVe')
                 
-                if review_name_tag and review_content_tag:
+                if review_name_tag and review_content_tag and rating_title_tag:
                     data['reviews'].append({
                         "Review Name": review_name_tag.text.strip(),
                         "Review Content": review_content_tag.text.strip(),
-                        "Rating": f"{rating_value}/5"
+                        "Rating": f"{rating_title_tag.get_attribute('textContent').strip().split()[0]}/5",
+                        "Review Date": review_date_tag.text.strip().split(' wrote a review ')[-1],
+                        "Date of Stay": date_stay_tag.text.strip()
                     })
             driver.find_element(By.CSS_SELECTOR, 'a[data-smoke-attr="pagination-next-arrow"]').click()
             time.sleep(5)
@@ -59,4 +61,3 @@ if __name__ == "__main__":
 
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
-  
