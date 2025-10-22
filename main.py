@@ -30,7 +30,7 @@ if __name__ == "__main__":
         
     data['reviews'] = []
     count = 0
-    while count < 5:  # Limit to first 5 pages for demo purposes
+    while count < 5:  
         try:
             review_tags = driver.find_elements(By.CSS_SELECTOR, 'div[data-test-target="HR_CC_CARD"]')
             for review in review_tags:
