@@ -11,7 +11,8 @@ def fetch_reviews():
     params = {
         'place_id': PLACE_ID,
         'fields': 'name,rating,reviews,formatted_address,user_ratings_total',
-        'key': API_KEY
+        'key': API_KEY,
+        'language': 'id',
     }
 
     response = requests.get(BASE_URL, params=params)
