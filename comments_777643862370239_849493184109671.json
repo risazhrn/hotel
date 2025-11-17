@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "created_time": "2025-11-17T08:28:35+0000",
+            "message": "Sangat puas dengan servisnya. Timnya sangat membantu dan informatif. Proses jadi terasa mudah dan cepat.",
+            "id": "849493184109671_1250304130237010"
+        },
+        {
+            "created_time": "2025-11-17T09:08:50+0000",
+            "message": "Semoga bisa lebih baik.",
+            "id": "849493184109671_1562477441557229"
+        }
+    ],
+    "paging": {
+        "cursors": {
+            "before": "WTI5dGJXVnVkRjlqZAFhKemIzSTZANVEkxTURNd05ERXpNREl6TnpBeE1Eb3hOell6TXpZANE1URTIZD",
+            "after": "WTI5dGJXVnVkRjlqZAFhKemIzSTZANVFUyTWpRM056UTBNVFUxTnpJeU9Ub3hOell6TXpjd05UTXgZD"
+        }
+    }
+}

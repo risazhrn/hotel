@@ -1,0 +1,47 @@
+{
+    "data": [
+        {
+            "created_time": "2025-11-17T05:56:33+0000",
+            "from": {
+                "name": "Rio Nurtantyana",
+                "id": "33383447437920655"
+            },
+            "message": "Good !",
+            "id": "344134194645575_838714915414441"
+        },
+        {
+            "created_time": "2025-11-17T06:04:11+0000",
+            "from": {
+                "name": "Rio Nurtantyana",
+                "id": "33383447437920655"
+            },
+            "message": "Oke",
+            "id": "344134194645575_1987293215396412"
+        },
+        {
+            "created_time": "2025-11-17T08:04:35+0000",
+            "message": "kereen",
+            "id": "344134194645575_1529328958112130"
+        },
+        {
+            "created_time": "2025-11-17T08:15:04+0000",
+            "from": {
+                "name": "Rio Nurtantyana",
+                "id": "33383447437920655"
+            },
+            "message": "iyaa bagaimana yaa",
+            "id": "344134194645575_1370013591466017"
+        },
+        {
+            "created_time": "2025-11-17T09:09:19+0000",
+            "message": "Perlu ditingkatkan.",
+            "id": "344134194645575_1339807800941738"
+        }
+    ],
+    "paging": {
+        "cursors": {
+            "before": "WTI5dGJXVnVkRjlqZAFhKemIzSTZAPRE00TnpFME9URTFOREUwTkRReE9qRTNOak16TlRnNU9UVT0ZD",
+            "after": "WTI5dGJXVnVkRjlqZAFhKemIzSTZANVE16T1Rnd056ZA3dNRGswTVRjek9Eb3hOell6TXpjd05UWXcZD"
+        }
+    }
+}
